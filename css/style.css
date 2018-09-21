@@ -1,0 +1,75 @@
+body {
+    text-align: center;
+}
+
+.modal-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.438);
+}
+
+.modal-body {
+    position: relative;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    background: #ffffff url(../images/geometry2.png);
+    transform: translate(-50%, -70%);
+    /*text-align: center;*/
+    border: 3px solid #A9A9A9;
+    border-radius: 20px;
+    padding: 0.5em;
+    font-size: 17px;
+}
+
+
+.hide {
+    display: none;
+}
+
+.modal-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid #A9A9A9;
+}
+
+.modal-close {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.congrats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.modal-button {
+    width: 100px;
+    height: 50px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.modal-cancel {
+    background-color: red;
+}
+
+.modal-replay {
+    background-color: blue;
+}
