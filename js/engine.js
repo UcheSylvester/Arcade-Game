@@ -40,6 +40,16 @@ var Engine = (function(global) {
         win.requestAnimationFrame(main);
     })
 
+
+    // For the modal and replay button 
+    const startModal = document.querySelector('.start-modal');
+    const startGame = document.querySelector('.start-button');
+
+    startGame.addEventListener('click', () => {
+        modal.classList.toggle('hide');
+        win.requestAnimationFrame(main);
+    })
+
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
      */
@@ -69,13 +79,28 @@ var Engine = (function(global) {
          */
 
 
-         if(player.victory === true) {
+         // Modify
+
+         // if(player.victory === false) {
+         //    // win.requestAnimationFrame(main);
+         //    win.cancelAnimationFrame(id);
+         //    startModal.classList.toggle('hide');
+         // }  else {
+
+         //    id = win.requestAnimationFrame(main);
+         // }
+
+
+        if(player.victory === true) {
             win.cancelAnimationFrame(id);
-            modal.classList.toggle('hide');
+            setTimeout(() => {
+                modal.classList.toggle('hide');
+            }, 500)
          } else {
             id = win.requestAnimationFrame(main);
         }
     }
+    
 
     /* This function does some initial setup that should only occur once,
      * particularly setting the lastTime variable that is required for the
