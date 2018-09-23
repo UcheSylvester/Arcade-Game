@@ -2,7 +2,8 @@ body {
     text-align: center;
 }
 
-.modal-background {
+.modal-background,
+.start-modal {
     position: absolute;
     top: 0;
     left: 0;
@@ -13,12 +14,11 @@ body {
 
 .modal-body {
     position: relative;
-    width: 350px;
+    width: 400px;
     top: 50%;
     left: 50%;
     background: #ffffff url(../images/geometry2.png);
     transform: translate(-50%, -70%);
-    /*text-align: center;*/
     border: 3px solid #A9A9A9;
     border-radius: 20px;
     padding: 0.5em;
@@ -31,16 +31,11 @@ body {
 }
 
 .modal-heading {
-    display: flex;
+    /*display: flex;
     justify-content: space-between;
-    align-items: center;
+    */align-items: center;
     padding: 0 1.5rem;
     border-bottom: 1px solid #A9A9A9;
-}
-
-.modal-close {
-    font-weight: bold;
-    font-size: 2rem;
 }
 
 .congrats {
@@ -57,7 +52,8 @@ body {
     padding: 1rem;
 }
 
-.modal-button {
+.modal-button,
+.start-button {
     width: 100px;
     height: 50px;
     border-radius: 7px;
@@ -66,10 +62,11 @@ body {
     font-size: 18px;
 }
 
-.modal-cancel {
-    background-color: red;
-}
-
 .modal-replay {
     background-color: blue;
+}
+
+.start-button {
+    background-color: green;
+    width: 150px;
 }
