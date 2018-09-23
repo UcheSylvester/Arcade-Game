@@ -70,7 +70,7 @@ class Hero {
         this.y = this.startY;
     }
 
-    // Update position
+    // Update position for collision and win
     update() {
 
         // Check for collision
@@ -131,12 +131,13 @@ class Hero {
 // From the above Enemy and Hero class
 
 const player = new Hero();
-const enemy1 = new Enemy(-101, 0, 450);
+const enemy1 = new Enemy((-101/5), 0, 450);
 const enemy2 = new Enemy(-101, 83, 300);
 const enemy3 = new Enemy((-101*2.5), 83, 400);
-const enemy4 = new Enemy(-101, 166, 250)
+const enemy4 = new Enemy(-101, 166, 250);
+const enemy5 = new Enemy(-101, 0, 350);
 const allEnemies = [];
-allEnemies.push(enemy1, enemy2, enemy3, enemy4);
+allEnemies.push(enemy1, enemy2, enemy3, enemy4, enemy5);
 
 
 // This listens for key presses and sends the keys to your
