@@ -29,7 +29,7 @@ var Engine = (function(global) {
     canvas.height = 606;
     doc.body.appendChild(canvas);
 
-    // For the modal and replay button 
+    // For the gameover modal and replay button 
     const modal = document.querySelector('.modal-background');
     const replay = document.querySelector('.modal-button');
 
@@ -78,9 +78,9 @@ var Engine = (function(global) {
          * function again as soon as the browser is able to draw another frame.
          */
 
-
-         // Modify
-
+        
+        // Working on the start modal
+        
          // if(player.victory === false) {
          //    // win.requestAnimationFrame(main);
          //    win.cancelAnimationFrame(id);
@@ -90,7 +90,12 @@ var Engine = (function(global) {
          //    id = win.requestAnimationFrame(main);
          // }
 
+         // $(window).load(function() {
+         //    $('.start-modal').modal('show')
+         // });
 
+
+        // Condition for showing the gameover modal
         if(player.victory === true) {
             win.cancelAnimationFrame(id);
             setTimeout(() => {
